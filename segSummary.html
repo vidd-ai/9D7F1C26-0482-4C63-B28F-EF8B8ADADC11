@@ -220,10 +220,12 @@ function flatten(root) {
     //window.location.href = "segSummary.html?u=" + user + '&c=Cat';
     if (summary_type.match(/cat/i)) {
       summary_type = 'File';
+      window.location.href = "segSummary.html?u=" + user + '&c=' + summary_type;
     } else {
       summary_type = 'Cat';
+      window.location.href = "category_map/index.html?u=" + user + '&c=' + summary_type;
     }
-    window.location.href = "segSummary.html?u=" + user + '&c=' + summary_type;
+    //window.location.href = "segSummary.html?u=" + user + '&c=' + summary_type;
   }
 
 </script>

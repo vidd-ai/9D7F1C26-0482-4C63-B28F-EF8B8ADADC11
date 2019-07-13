@@ -23,6 +23,7 @@ function getUrlVars() {
 var fn = getUrlVars()['fn'];
 var user = getUrlVars()['u'];
 var demo = getUrlVars()['d'];
+var label = getUrlVars()['l'];
 var v = getUrlVars()['v'];
 var c = getUrlVars()['c'];
 </script>
@@ -34,12 +35,15 @@ var c = getUrlVars()['c'];
     title = title + ' file map';
   }
   if (c.match(/cat/i)) {
-    title = title + ' category map';
+    title = title + ' category map for ' + label;
   }
   if (v.match(/segView/g)) {
     title = title + ' segment map for ' + fn;
   }
   document.title = title;
+  if (label) {
+    full_url += "&l=" + label;
+  }
   if (fn) {
     full_url += "&fn=" + fn;
   }
